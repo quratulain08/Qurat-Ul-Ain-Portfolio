@@ -64,7 +64,11 @@ function EnhancedSkills() {
       <CardContent className="p-4 md:p-6">
         {/* category selector */}
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="inline-flex rounded-lg border border-border/60 bg-muted/40 p-1">
+          <div 
+            className="inline-flex rounded-lg border border-border/60 bg-muted/40 p-1"
+            role="tablist"
+            aria-label="Skill categories"
+          >
             <CategoryButton label="Frontend" active={active} onClick={() => setActive("Frontend")} />
             <CategoryButton label="Backend" active={active} onClick={() => setActive("Backend")} />
             <CategoryButton label="Tools" active={active} onClick={() => setActive("Tools")} />
@@ -321,8 +325,14 @@ function CategoryButton({
       type="button"
       onClick={onClick}
       variant={isActive ? "default" : "secondary"}
-      className={cn("rounded-md px-3 py-1 text-sm", !isActive && "bg-transparent text-foreground hover:bg-muted")}
-      aria-pressed={isActive}
+      className={cn(
+        "rounded-md px-3 py-1 text-sm transition-all duration-200 hover:scale-105", 
+        !isActive && "bg-transparent text-foreground hover:bg-muted"
+      )}
+      role="tab"
+      aria-selected={isActive}
+      aria-controls={`${label.toLowerCase()}-skills`}
+      tabIndex={isActive ? 0 : -1}
       aria-label={`Show ${label} skills`}
     >
       {label}

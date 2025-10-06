@@ -87,34 +87,53 @@ export function ProjectsSection() {
             transition={{ duration: 0.45, delay: idx * 0.05 }}
             viewport={{ once: true }}
           >
-            <Card className="group h-full overflow-hidden border-border/60 bg-card/80 backdrop-blur">
+            <Card className="group h-full overflow-hidden border-border/60 bg-card/80 backdrop-blur hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
               <CardHeader className="p-0">
-                <div className="relative">
-                  <img
+                <div className="relative overflow-hidden">
+                  <motion.img
                     src={p.image || "/placeholder.svg"}
                     alt={`${p.name} preview`}
-                    className="h-40 w-full object-cover md:h-48"
+                    className="h-40 w-full object-cover md:h-48 transition-transform duration-500"
+                    whileHover={{ scale: 1.1 }}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </CardHeader>
               <CardContent className="p-4">
-                <CardTitle className="text-lg">{p.name}</CardTitle>
-                <p className="mt-1 text-sm text-muted-foreground">{p.description}</p>
+                <CardTitle className="text-lg group-hover:text-primary transition-colors duration-200">{p.name}</CardTitle>
+                <p className="mt-1 text-sm text-muted-foreground line-clamp-3">{p.description}</p>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {p.stack.map((s) => (
-                    <Badge key={s} variant="outline" className="border-border/70">
-                      {s}
-                    </Badge>
+                  {p.stack.map((s, index) => (
+                    <motion.div
+                      key={s}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <Badge variant="outline" className="border-border/70 hover:border-primary/50 transition-colors duration-200">
+                        {s}
+                      </Badge>
+                    </motion.div>
                   ))}
                 </div>
               </CardContent>
               <CardFooter className="flex gap-2 p-4 pt-0">
-                <Button asChild size="sm" className="bg-primary text-primary-foreground">
+                <Button 
+                  asChild 
+                  size="sm" 
+                  className="bg-primary text-primary-foreground transform transition-all duration-200 hover:scale-105 hover:shadow-md"
+                >
                   <a href={p.live || "#"} target="_blank" rel="noreferrer">
                     Live Demo
                   </a>
                 </Button>
-                <Button asChild size="sm" variant="secondary">
+                <Button 
+                  asChild 
+                  size="sm" 
+                  variant="secondary"
+                  className="transform transition-all duration-200 hover:scale-105 hover:shadow-md"
+                >
                   <a href={p.github || "#"} target="_blank" rel="noreferrer">
                     GitHub
                   </a>

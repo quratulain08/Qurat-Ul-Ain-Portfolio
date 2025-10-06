@@ -23,7 +23,7 @@ export default function ScrollProgress() {
       style={{ contain: "strict" }}
     >
       <div
-        className="h-full origin-left bg-primary transition-[width] duration-150 ease-linear"
+        className="h-full origin-left bg-gradient-to-r from-primary via-rose-500 to-primary transition-[width] duration-150 ease-linear shadow-sm"
         style={{ width: `${progress}%` }}
       />
     </div>
