@@ -44,18 +44,19 @@ export function AboutSection() {
 
             {/* Text Content */}
             <div className="space-y-6">
-              <motion.p
-                initial={{ opacity: 0 }}
+              <p className="text-muted-foreground leading-relaxed">
+                {/* initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-lg leading-relaxed text-muted-foreground"
-              >
-                Hi 👋 I’m <span className="font-medium text-foreground">Quratulain Bangash</span>, a{" "}
-                <strong>Full-Stack Web Developer</strong> and recent graduate who loves crafting modern, clean, and
-                functional web applications. I’m passionate about turning ideas into smooth, interactive, and elegant
+                viewport={{ once: true }} */}
+           
+              
+                Hi 👋 I’m <strong >Qurat Ul Ain Bangash</strong>, a{" "}
+                <strong>Full-Stack Web Developer</strong> and recent graduate who loves crafting modern, clean,
+                 and functional web applications. 
+                I’m passionate about turning ideas into smooth, interactive, and elegant
                 user experiences that feel effortless to use.
-              </motion.p>
+              </p>
 
               <p className="text-muted-foreground leading-relaxed">
                 I specialize in building full-stack solutions with{" "}
