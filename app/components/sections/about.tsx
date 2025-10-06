@@ -60,7 +60,7 @@ export function AboutSection() {
               <p className="text-muted-foreground leading-relaxed">
                 I specialize in building full-stack solutions with{" "}
                 <strong>React, Next.js, Node.js, Express, and PostgreSQL/MongoDB</strong>.  
-                My approach is simple — design with empathy, develop with precision, and deliver products that are fast,
+                My approach is simple -design with empathy, develop with precision, and deliver products that are fast,
                 accessible, and visually pleasing.  
                 I enjoy every part of the process, from designing UIs to integrating APIs and deploying production-ready
                 apps.
