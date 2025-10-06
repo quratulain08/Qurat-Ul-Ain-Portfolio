@@ -14,10 +14,10 @@ const dmSans = DM_Sans({
   variable: "--font-geist-sans", // maps to --font-sans in globals.css
 })
 const dmMono = DM_Mono({
+  weight: ["300", "400", "500"],
   subsets: ["latin"],
   display: "swap",
   variable: "--font-geist-mono", // maps to --font-mono in globals.css
-  weight: ["400"],
 })
 
 export const metadata: Metadata = {
