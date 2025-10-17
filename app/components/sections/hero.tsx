@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Sparkles } from "lucide-react"
+import { Sparkles, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
@@ -101,12 +101,21 @@ export function HeroSection() {
             >
               <a href="#contact">Let's Connect</a>
             </Button>
-            <Button 
-              asChild 
-              variant="secondary"
+        
+            <Button
+              asChild
+              variant="ghost"
               className="transform transition-all duration-200 hover:scale-105"
             >
-              <a href="#projects">View Projects</a>
+              <a
+                href="https://www.fiverr.com/quratulain_08/create-an-incredible-custom-website-with-interactive-features"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2"
+              >
+                Hire me on Fiverr
+                <ExternalLink className="h-4 w-4" aria-hidden />
+              </a>
             </Button>
           </motion.div>
           
