@@ -33,9 +33,9 @@ export function AboutSection() {
               viewport={{ once: true }}
               className="flex justify-center"
             >
-              <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-pink-200 shadow-md">
+              <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-teal-500/50 shadow-lg shadow-teal-500/20">
                 <img
-                  src="/assets/myphoto.jpg"
+                  src="/assets/Qurat Ul Ain.png"
                   alt="Quratulain Bangash"
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                 />
@@ -90,7 +90,7 @@ export function AboutSection() {
               {/* CV Button */}
               <div className="pt-4">
                 <Button asChild className="bg-primary text-primary-foreground hover:opacity-90 transition-all duration-300">
-                  <a href="/QURATULAIN-CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+                  <a href="/QURATULAIN-Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
                     <Download className="mr-2 h-4 w-4" aria-hidden />
                     Download CV
                   </a>

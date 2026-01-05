@@ -10,7 +10,7 @@ export function HeroSection() {
       {/* Dynamic background elements */}
       <div className="absolute inset-0 -z-10">
         <motion.div
-          className="absolute top-20 -left-4 h-72 w-72 rounded-full bg-gradient-to-r from-pink-200/20 to-rose-200/20 blur-3xl"
+          className="absolute top-20 -left-4 h-72 w-72 rounded-full bg-gradient-to-r from-cyan-600/15 to-teal-600/15 blur-3xl"
           animate={{
             x: [0, 30, 0],
             y: [0, -20, 0],
@@ -22,7 +22,7 @@ export function HeroSection() {
           }}
         />
         <motion.div
-          className="absolute top-40 -right-4 h-96 w-96 rounded-full bg-gradient-to-r from-rose-200/15 to-pink-200/15 blur-3xl"
+          className="absolute top-40 -right-4 h-96 w-96 rounded-full bg-gradient-to-r from-teal-600/12 to-cyan-700/12 blur-3xl"
           animate={{
             x: [0, -20, 0],
             y: [0, 30, 0],
@@ -48,7 +48,7 @@ export function HeroSection() {
           }}
         />
         <motion.div
-          className="absolute bottom-32 right-1/4 h-6 w-6 rounded-full bg-rose-400/20"
+          className="absolute bottom-32 right-1/4 h-6 w-6 rounded-full bg-cyan-400/20"
           animate={{
             y: [0, 20, 0],
             opacity: [0.2, 0.6, 0.2],
@@ -161,13 +161,13 @@ export function HeroSection() {
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             />
             <motion.div
-              className="absolute inset-1 rounded-full border border-rose-400/20"
+              className="absolute inset-1 rounded-full border border-teal-400/25"
               animate={{ rotate: -360 }}
               transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
             />
             
             <img
-              src="/assets/myphoto.jpg"
+              src="/assets/Qurat Ul Ain.png"
               alt="Portrait of Quratulain Bangash"
               className="h-full w-full object-cover relative z-10"
             />
